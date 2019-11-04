@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerNewsTestWebAPI", "HackerNewsTestWebAPI\HackerNewsTestWebAPI.csproj", "{20F62F75-6A1A-48B6-8E94-1F8CB6FB97CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20F62F75-6A1A-48B6-8E94-1F8CB6FB97CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F62F75-6A1A-48B6-8E94-1F8CB6FB97CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F62F75-6A1A-48B6-8E94-1F8CB6FB97CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F62F75-6A1A-48B6-8E94-1F8CB6FB97CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {869622BB-3B55-4921-A694-9F86DF8FAFA0}
+	EndGlobalSection
+EndGlobal
