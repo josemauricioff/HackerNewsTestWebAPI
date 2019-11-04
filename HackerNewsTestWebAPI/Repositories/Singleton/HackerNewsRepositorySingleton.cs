@@ -8,21 +8,21 @@ namespace HackerNewsTestWebAPI.Repositories.Singleton
 {
     public static class HackerNewsRepositorySingleton
     {
-        private static List<IItem> listOfBestsItems = new List<IItem>();
+        private static List<IItem> listOfBestItems = new List<IItem>();
         private static readonly object lockList = new object();
 
-        public static List<IItem> ListOfBestsItems 
+        public static List<IItem> ListOfBestItems 
         { 
             get
             {
-                return listOfBestsItems;
+                return listOfBestItems;
             }
         }
-        public static void SetItemsIdsBestsScores(List<IItem> lBestsItems)
+        public static void SetItemsIdsBestScores(List<IItem> lBestItems)
         {
             lock (lockList)
             {
-                listOfBestsItems = lBestsItems;
+                listOfBestItems = lBestItems;
             }
         }
     }

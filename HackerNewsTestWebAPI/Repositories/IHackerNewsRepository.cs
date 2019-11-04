@@ -8,9 +8,9 @@ namespace HackerNewsTestWebAPI.Repositories
 {
     public interface IHackerNewsRepository
     {
-        Task<IEnumerable<int>> GetIdsBests();
+        Task<IEnumerable<int>> GetIdsBest();
         Task<IItem> GetItem(int itemId);
-        Task<List<IItem>> GetBestsItem();
+        Task<List<IItem>> GetBestItems();
 
     }
 }

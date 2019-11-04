@@ -15,13 +15,10 @@ namespace HackerNewsTestWebAPI.Models
         public int? Time { get; set; }
         public string Text { get; set; }
         public bool? Dead { get; set; }
-        public object Parent { get; set; }
-        public object Poll { get; set; }
         public IEnumerable<int> Kids { get; set; }
         public string Url { get; set; }
         public int Score { get; set; }
         public string Title { get; set; }
-        public object Parts { get; set; }
         public int Descendants { get; set; }
     }
 }

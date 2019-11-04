@@ -14,13 +14,10 @@ namespace HackerNewsTestWebAPI.Models.Interfaces
         int? Time { get; set; }
         string Text { get; set; }
         bool? Dead { get; set; }
-        object Parent { get; set; }
-        object Poll { get; set; }
         IEnumerable<int> Kids { get; set; }
         string Url { get; set; }
         int Score { get; set; }
         string Title { get; set; }
-        object Parts { get; set; }
         int Descendants { get; set; }
     }
 }

@@ -23,42 +23,42 @@ namespace HackerNewsTestWebAPI.Repositories
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<IEnumerable<int>> GetIdsBests()
+        public async Task<IEnumerable<int>> GetIdsBest()
         {
-            HttpResponseMessage resp = await client.GetAsync(endPoints.Value.Actions["BestsScores"]);
+            HttpResponseMessage resp = await client.GetAsync(endPoints.Value.Actions["BestScores"]);
 
-            var bests = await resp.Content.ReadAsStringAsync();
+            var best = await resp.Content.ReadAsStringAsync();
 
-            return JsonConvert.DeserializeObject<List<int>>(bests);
+            return JsonConvert.DeserializeObject<List<int>>(best);
         }
 
         public async Task<IItem>GetItem(int itemId)
         {
             HttpResponseMessage resp = await client.GetAsync(string.Format(endPoints.Value.Actions["Item"], itemId.ToString()));
 
-            var bests = await resp.Content.ReadAsStringAsync();
+            var best = await resp.Content.ReadAsStringAsync();
 
-            var item = JsonConvert.DeserializeObject<Item>(bests);
+            var item = JsonConvert.DeserializeObject<Item>(best);
 
             return item;
         }
 
-        public async Task<List<IItem>> GetBestsItem()
+        public async Task<List<IItem>> GetBestItems()
         {
-            if (HackerNewsRepositorySingleton.ListOfBestsItems.Count == 0)
+            if (HackerNewsRepositorySingleton.ListOfBestItems.Count == 0)
             {
-                var idsBests = await GetIdsBests();
+                var idsBest = await GetIdsBest();
 
                 var lItem = new List<IItem>();
-                foreach (var id in idsBests)
+                foreach (var id in idsBest)
                 {
                     lItem.Add(await GetItem(id));
                 }
 
-                HackerNewsRepositorySingleton.SetItemsIdsBestsScores(lItem);
+                HackerNewsRepositorySingleton.SetItemsIdsBestScores(lItem);
             }
 
-            return HackerNewsRepositorySingleton.ListOfBestsItems;
+            return HackerNewsRepositorySingleton.ListOfBestItems;
         }
     }
 }

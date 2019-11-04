@@ -16,12 +16,12 @@ namespace HackerNewsTestWebAPI.Controllers
             this.repository = repository;
         }
 
-        [Route("/item/GetBests20")]
-        public async Task<IEnumerable<IItem>> GetBests20()
+        [Route("/item/GetFist20Best")]
+        public async Task<IEnumerable<IItem>> GetFist20Best()
         {
-            var bestsItems = await repository.GetBestsItem();
+            var bestItems = await repository.GetBestItems();
 
-            return bestsItems.OrderByDescending(i => i.Score).Take(20);
+            return bestItems.Take(20).OrderByDescending(i => i.Score);
         }
     }
 }
